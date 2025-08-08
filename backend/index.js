@@ -10,7 +10,7 @@ const app=express();
 
 
 app.use(cors({
-  origin: 'https://dsa-instructor-liard.vercel.app/', // frontend URL
+  origin: 'https://dsa-instructor-liard.vercel.app', // frontend URL
   credentials: true,
 }));
 app.use(express.json());
