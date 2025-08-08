@@ -7,9 +7,13 @@ dotenv.config();
 const port=process.env.PORT || 5000
 
 const app=express();
+const allowedOrigins = [
+  "http://localhost:5173",                            
+  "https://dsa-instructor-liard.vercel.app/",          
+];
 
 app.use(cors({
-  origin: 'http://localhost:5173', // frontend URL
+  origin:  allowedOrigins, // frontend URL
   credentials: true,
 }));
 app.use(express.json());
